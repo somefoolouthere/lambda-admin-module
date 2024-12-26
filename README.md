@@ -32,7 +32,7 @@ Admin Module Settings
 
 ## Custom Bad Words
 
-You can add your own words to be against the "No Bad Words" rule by editing admin-bannedwords.json, located in lambdaplayers within your game's data folder.
+You can add your own words to be against the "No Bad Words" rule by editing admin-bannedwords.json, located in garrysmod/data/lambdaplayers.
 
 Example JSON
 
