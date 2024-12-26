@@ -29,3 +29,17 @@ You can add custom punishment lines as well via the text panel. All punish lines
 Admin Module Settings
 
 ![image](https://user-images.githubusercontent.com/109770359/222876669-8a1b783b-111e-4fec-9805-e4a87052e164.png)
+
+## Custom Bad Words
+
+You can add your own words to be against the "No Bad Words" rule by editing admin-bannedwords.json, located in lambdaplayers within your game's data folder.
+
+Example JSON
+
+```json
+[
+    "hello",
+    "sorry",
+    "goodbye"
+]
+```
