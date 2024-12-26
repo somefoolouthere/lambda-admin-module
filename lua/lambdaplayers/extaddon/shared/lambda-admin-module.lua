@@ -19,6 +19,7 @@ local ents_Create = ents and ents.Create or nil
 local table_insert = table.insert
 local string_lower = string.lower
 local file_Exists = file.Exists
+local bannedwords_file = "lambdaplayers/admin-bannedwords.json"
 
 local jailmdl = Model( "models/props_building_details/Storefront_Template001a_Bars.mdl" )
 local jailpositions = {
@@ -77,8 +78,8 @@ local bantimes = {
 	31557600
 }
 
-if file_Exists( "lambdaplayers/admin-bannedwords.json", "DATA" ) then
-	local addon = LAMBDAFS:ReadFile( "lambdaplayers/admin-bannedwords.txt", "json" )
+if file_Exists( bannedwords_file, "DATA" ) then
+	local addon = LAMBDAFS:ReadFile( bannedwords_file, "json" )
 	if addon then
 		for k, word in ipairs( addon ) do
 			bannedwords[ #bannedwords + 1 ] = word
@@ -86,8 +87,8 @@ if file_Exists( "lambdaplayers/admin-bannedwords.json", "DATA" ) then
 	end
 end
 
-if SERVER and !file_Exists( "lambdaplayers/admin-bannedwords.json", "DATA" ) then
-	LAMBDAFS:WriteFile( "lambdaplayers/admin-bannedwords.json", {}, "json" )
+if SERVER and !file_Exists( bannedwords_file, "DATA" ) then
+	LAMBDAFS:WriteFile( bannedwords_file, {}, "json" )
 end
 
 
