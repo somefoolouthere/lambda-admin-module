@@ -6,14 +6,14 @@ A module for Lambda Players that allows Lambdas to become admins and enforce cer
 
 This module adds two new Voice Types:
 
-* adminscold  |  This Voice Type is used when a Admin scolds an offender
+* adminscold  |  This Voice Type is used when an Admin scolds an offender
 * sitrespond  |  This Voice Type is used when an offender responds to a Admin
 
 ## Text Types
 
 This module adds two new Text Types:
 
-* adminscold  |  This Text Type is used when a Admin scolds an offender
+* adminscold  |  This Text Type is used when an Admin scolds an offender
 * sitrespond  |  This Text Type is used when an offender responds to a Admin
 
 Literally the same thing.
