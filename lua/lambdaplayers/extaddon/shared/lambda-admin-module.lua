@@ -82,7 +82,7 @@ if file_Exists( bannedwords_file, "DATA" ) then
 	local addon = LAMBDAFS:ReadFile( bannedwords_file, "json" )
 	if addon then
 		for k, word in ipairs( addon ) do
-			bannedwords[ #bannedwords + 1 ] = word
+			bannedwords[ #bannedwords + 1 ] = string_lower(word)
 		end
 	end
 end
