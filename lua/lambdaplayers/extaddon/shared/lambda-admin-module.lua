@@ -851,7 +851,7 @@ if CLIENT then
 	local DrawText = draw.DrawText
 
 	LambdaCreateProfileSetting( "DCheckBox", "l_admin", "Admin Module", function( pnl, parent )
-		local lbl = LAMBDAPANELS:CreateLabel( "[Is Admin]\nIf enabled, this profile will always be a admin regardless of the admin limit", parent, TOP )
+		local lbl = LAMBDAPANELS:CreateLabel( "[Is Admin]\nIf enabled, this profile will always be an admin regardless of the admin limit", parent, TOP )
 		lbl:SetWrap( true )
 		lbl:SetSize( 100, 70 )
 		lbl:SetParent( parent )
