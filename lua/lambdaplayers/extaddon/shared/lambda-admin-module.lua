@@ -577,10 +577,10 @@ local function Initialize( self )
 		end )
 
 		while self:IsTyping() do
-			coroutine.yield()
-			if self:GetIsDead() then
+--[[			if self:GetIsDead() then
 				offender.l_activeadmin = nil
-			end
+			end]]
+			coroutine.yield()
 		end
 
 		if !IsValid( ent ) then return end
