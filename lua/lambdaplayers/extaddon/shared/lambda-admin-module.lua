@@ -1,6 +1,6 @@
 local warningcolor = Color( 114, 24, 24 )
 local kickbanreasoncolor = Color( 51, 255, 0)
-local normalcolor = Color( 152, 175 ,199)
+local normalcolor = Color( 152, 175, 199)
 local color_white = color_white
 local player_GetAll = player.GetAll
 local team_GetColor = team.GetColor
@@ -567,7 +567,7 @@ local function Initialize( self )
 		ent = ent != nil and ent or self
 		local msg = bool and " granted god mode upon " or " revoked god mode from "
 		local running = true
-		offender = self.l_offendingplayer
+		local offender = self.l_offendingplayer
 
 		if !IsValid( ent ) then running = false return end
 		self:TypeMessage( "!god" )
