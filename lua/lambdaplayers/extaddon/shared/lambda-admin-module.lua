@@ -49,7 +49,9 @@ local bannedwords = {
 	"dumbass",
 	" ass ",
 	" ass.",
-	" ass,"
+	" ass,",
+	" ass?",
+	" ass!"
 }
 
 local bantimes = {
