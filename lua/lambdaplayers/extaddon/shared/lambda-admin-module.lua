@@ -47,7 +47,7 @@ local bannedwords = {
 	"pussy",
 	"cunt",
 	"dumbass",
-	" ass ",
+--	" ass ",
 	" ass.",
 	" ass,",
 	" ass?",
