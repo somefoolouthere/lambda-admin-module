@@ -95,14 +95,14 @@ end
 
 
 CreateLambdaConvar( "lambdaplayers_lambdaadmin_maxadmins", 2, true, false, false, "How many Lambda Admins can exist at once", 0, 100, { type = "Slider", decimals = 0, name = "Max Admin Count", category = "Admins" } )
-CreateLambdaConvar( "lambdaplayers_lambdaadmin_adminchance", 100, true, false, false, "The chance a Lambda will spawn as a Admin", 0, 100, { type = "Slider", decimals = 0, name = "Admin Chance", category = "Admins" } )
+CreateLambdaConvar( "lambdaplayers_lambdaadmin_adminchance", 50, true, false, false, "The chance a Lambda will spawn as an Admin", 0, 100, { type = "Slider", decimals = 0, name = "Admin Chance", category = "Admins" } )
 CreateLambdaConvar( "lambdaplayers_lambdaadmin_ignoreplayers", 0, true, false, false, "If Admins should ignore real players that are breaking the rules", 0, 1, { type = "Bool", name = "Ignore Players", category = "Admins" } )
 local donothurtplayers = CreateLambdaConvar( "lambdaplayers_lambdaadmin_ruledonothurtplayers", 1, true, false, false, "If Lambdas are not allowed to hurt real players", 0, 1, { type = "Bool", name = "Rule: Do not Hurt Players", category = "Admins" } )
 local noswearing = CreateLambdaConvar( "lambdaplayers_lambdaadmin_rulenoswearing", 1, true, false, false, "If Lambdas are not allowed to say bad words on this minecraft christian server", 0, 1, { type = "Bool", name = "Rule: No Bad Words", category = "Admins" } )
 local nordm = CreateLambdaConvar( "lambdaplayers_lambdaadmin_rulenordm", 0, true, false, false, "If Lambdas are not allowed to attack people", 0, 1, { type = "Bool", name = "Rule: No RDM", category = "Admins" } )
 CreateLambdaColorConvar( "lambdaplayers_lambdaadmincolor", Color( 81, 255, 0 ), true, true, "The display color Admin Lambdas should have", { name = "Admin Display Color", category = "Admins" } )
-LambdaRegisterVoiceType( "adminscold", "lambdaplayers/vo/adminscold", "These are voicelines that play when a admin questions a rule breaker" )
-LambdaRegisterVoiceType( "sitrespond", "lambdaplayers/vo/sitrespond", "These are voicelines that play when a rule breaker responds to a admin" )
+LambdaRegisterVoiceType( "adminscold", "lambdaplayers/vo/adminscold", "These are voicelines that play when an admin questions a rule breaker" )
+LambdaRegisterVoiceType( "sitrespond", "lambdaplayers/vo/sitrespond", "These are voicelines that play when a rule breaker responds to an admin" )
 
 local function GetLambdaAdmins()
 	local admins = {}
