@@ -309,11 +309,13 @@ local function Initialize( self )
 		table_insert( BannedLambdas, name )
 		table_RemoveByValue( LambdaPlayerNames, name )
 
-		timer_Simple( seconds, function()
-			if table_HasValue( LambdaPlayerNames, name ) then return end
-			table_insert( LambdaPlayerNames, name )
-			table_RemoveByValue( BannedLambdas, name )
-		end )
+		if seconds < 65536 then
+			timer_Simple( seconds, function()
+				if table_HasValue( LambdaPlayerNames, name ) then return end
+				table_insert( LambdaPlayerNames, name )
+				table_RemoveByValue( BannedLambdas, name )
+			end )
+		end
 
 		lambda:Remove()
 		running = false
