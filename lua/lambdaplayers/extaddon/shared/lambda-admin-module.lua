@@ -136,8 +136,9 @@ end )
 
 hook.Add( "PlayerSay", "lambdaadmins_nobadwords", function( ply, text )
 	if !noswearing:GetBool() then return end
+	local text_lower = string_lower(text)
 	for k, v in ipairs( bannedwords ) do
-		if string_find( string_lower(text), v ) then
+		if string_find( text_lower, v ) then
 			hook.Run( "LambdaAdminsRuleViolate", {
 				offender = ply,
 				rule = "badword",
@@ -150,8 +151,9 @@ end )
 
 hook.Add( "LambdaPlayerSay", "lambdaadmins_nobadwords", function( self, text )
 	if !noswearing:GetBool() then return end
+	local text_lower = string_lower(text)
 	for k, v in ipairs( bannedwords ) do
-		if string_find( string_lower(text), v ) then
+		if string_find( text_lower, v ) then
 			hook.Run( "LambdaAdminsRuleViolate", {
 				offender = self,
 				rule = "badword",
