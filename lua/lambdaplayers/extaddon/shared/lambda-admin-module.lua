@@ -71,13 +71,13 @@ local bantimes = {
 	21600,
 	28800,
 	43200,
-	86400,
-	172800,
+	86400, --1 day
+	172800, --2 days
 	259200,
 	604800,
 	1209600,
 	2592000,
-	31557600
+	31557600 --1 year
 }
 
 if file_Exists( bannedwords_file, "DATA" ) then
@@ -252,7 +252,12 @@ local function Initialize( self )
 			if lambda == self then self:RemoveHook( "LambdaPlayerSay", "admincommandhide" ) return "" end
 		end )
 
-		while self:IsTyping() do coroutine.yield() end
+		while self:IsTyping() do
+--[[			if self:GetIsDead() then
+				offender.l_activeadmin = nil
+			end]]
+			coroutine.yield()
+		end
 
 		if !IsValid( lambda ) then return end
 
@@ -281,7 +286,12 @@ local function Initialize( self )
 			if lambda == self then self:RemoveHook( "LambdaPlayerSay", "admincommandhide" ) return "" end
 		end )
 
-		while self:IsTyping() do coroutine.yield() end
+		while self:IsTyping() do
+--[[			if self:GetIsDead() then
+				offender.l_activeadmin = nil
+			end]]
+			coroutine.yield()
+		end
 
 		if !IsValid( lambda ) then return end
 
@@ -413,7 +423,12 @@ local function Initialize( self )
 			if lambda == self then self:RemoveHook( "LambdaPlayerSay", "admincommandhide" ) return "" end
 		end )
 
-		while self:IsTyping() do coroutine.yield() end
+		while self:IsTyping() do
+--[[			if self:GetIsDead() then
+				offender.l_activeadmin = nil
+			end]]
+			coroutine.yield()
+		end
 
 		if !IsValid( ent ) then return end
 
